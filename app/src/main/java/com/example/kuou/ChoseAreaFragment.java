@@ -117,7 +117,8 @@ public class ChoseAreaFragment extends Fragment {
             cursor.close();
             adapter.notifyDataSetChanged();
         }else{
-            String address="http://guolin.tech/api/china";
+//            String address="http://guolin.tech/api/china";
+            String address="http://localhost:8081/China";
             Log.d(getActivity().toString(),"http://guolin.tech/api/china");
             requestHttp(address,"Province");
         }
@@ -136,7 +137,8 @@ public class ChoseAreaFragment extends Fragment {
             cursor.close();
             adapter.notifyDataSetChanged();
         }else{
-            String address="http://guolin.tech/api/china/"+chose_Province.getProvinceCode();
+//            String address="http://guolin.tech/api/china/"+chose_Province.getProvinceCode();
+            String address="http://localhost:8081/China"+chose_Province.getProvinceCode();
             requestHttp(address,"City");
         }
     }
@@ -154,7 +156,8 @@ public class ChoseAreaFragment extends Fragment {
             cursor.close();
             adapter.notifyDataSetChanged();
         }else{
-            String address="http://guolin.tech/api/china/"+chose_Province.getProvinceCode()+"/"+chose_City.getCityCode();
+//            String address="http://guolin.tech/api/china/"+chose_Province.getProvinceCode()+"/"+chose_City.getCityCode();
+            String address="http://localhost:8081/China"+chose_Province.getProvinceCode()+"/"+chose_City.getCityCode();
             requestHttp(address,"Contry");
         }
 
